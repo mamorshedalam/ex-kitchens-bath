@@ -13,15 +13,18 @@
     @apply block md:text-lg text-base tracking-wide font-semibold text-center xl:px-3 lg:p-2 p-1 hover:text-rose-600 duration-300 ease-out transition-colors;
   }
   .btn-black {
-    @apply bg-black text-white md:text-base text-sm md:leading-5 font-semibold md:px-4 px-2 md:py-1.5 py-1 rounded-md hover:bg-rose-600 duration-300 ease-out transition-colors;
+    @apply bg-black text-white md:text-base text-sm md:leading-5 font-semibold capitalize tracking-wide md:px-4 px-2 md:py-1.5 py-1 rounded-md hover:bg-rose-600 duration-300 ease-out transition-colors;
   }
   .btn-icon {
     @apply flex items-center justify-center md:scale-100 scale-[0.80] bg-black text-white w-9 h-9 rounded-full hover:bg-rose-600 duration-300 ease-out transition-colors;
+  }
+  .section-container {
+    @apply relative max-w-screen-2xl xl:p-20 lg:p-12 md:p-9 sm:p-6 p-2 mx-auto;
   }
 }
 
 @layer base {
   body {
-    @apply font-omnes;
+    @apply font-omnes sm:text-base text-sm;
   }
 }

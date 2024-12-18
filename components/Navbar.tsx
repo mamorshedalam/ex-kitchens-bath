@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
-    <header className="relative">
+    <header className="relative max-w-screen-2xl mx-auto">
       <div className="top-header">
         <span>Want talk with expert</span>
         <MoveRight size={14} />
