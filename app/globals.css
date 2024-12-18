@@ -2,20 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .top-header {
+    @apply flex items-center justify-center gap-2 bg-rose-600 text-white md:text-sm text-xs md:leading-6 leading-5 tracking-wide capitalize p-1.5;
+  }
+  .nav-main {
+    @apply lg:block lg:relative absolute top-full right-0 lg:opacity-100 visible bg-white lg:w-auto lg:max-w-full w-3/4 max-w-60 lg:drop-shadow-none drop-shadow-md duration-500 ease-out transition-all;
+  }
+  .nav-item {
+    @apply block md:text-lg text-base tracking-wide font-semibold text-center xl:px-3 lg:p-2 p-1 hover:text-rose-600 duration-300 ease-out transition-colors;
+  }
+  .btn-black {
+    @apply bg-black text-white md:text-base text-sm md:leading-5 font-semibold md:px-4 px-2 md:py-1.5 py-1 rounded-md hover:bg-rose-600 duration-300 ease-out transition-colors;
+  }
+  .btn-icon {
+    @apply flex items-center justify-center md:scale-100 scale-[0.80] bg-black text-white w-9 h-9 rounded-full hover:bg-rose-600 duration-300 ease-out transition-colors;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    @apply font-omnes;
+  }
 }
