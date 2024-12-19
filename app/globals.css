@@ -19,7 +19,13 @@
     @apply flex items-center justify-center md:scale-100 scale-[0.80] bg-black text-white w-9 h-9 rounded-full hover:bg-rose-600 duration-300 ease-out transition-colors;
   }
   .section-container {
-    @apply relative max-w-screen-2xl xl:p-20 lg:p-12 md:p-9 sm:p-6 p-2 mx-auto;
+    @apply relative max-w-screen-2xl xl:p-20 lg:p-12 md:px-9 sm:px-6 px-2 py-9 mx-auto;
+  }
+  .section-banner {
+    @apply relative text-white bg-cover bg-center bg-no-repeat md:px-9 px-4 pt-12 md:h-60 h-40 md:text-left text-center before:absolute before:inset-0 before:w-full before:h-full before:bg-black/25 before:z-0;
+  }
+  .section-title {
+    @apply font-semibold md:text-4xl text-3xl tracking-wide text-center lg:mb-9 md:mb-6 mb-4;
   }
 }
 
