@@ -4,58 +4,42 @@ import Link from "next/link";
 export default function Home() {
   const dataArray = [
     {
-      name: "IN-STOCK CABINETRY",
-      description:
-        "Looking for cabinets quick? Our in-stock cabinetry is available in a shaker door style in several colors, ready to be delivered to your project site asap!",
+      name: "Kitchen Design",
+      image: "/Kitchen Design.jpeg",
+      link: "",
+    },
+    {
+      name: "Flooring",
+      image: "/Flooring.jpg",
+      link: "",
+    },
+    {
+      name: "Closet Design",
+      image: "/Closet Design.jpg",
+      link: "https://saloni.furniture/collection/dressing-rooms",
+    },
+    {
+      name: "Blinds",
       image: "/product-1.jpg",
       link: "",
     },
     {
-      name: "IN-STOCK CABINETRY",
-      description:
-        "Looking for cabinets quick? Our in-stock cabinetry is available in a shaker door style in several colors, ready to be delivered to your project site asap!",
+      name: "Custom Art",
       image: "/product-1.jpg",
       link: "",
     },
     {
-      name: "IN-STOCK CABINETRY",
-      description:
-        "Looking for cabinets quick? Our in-stock cabinetry is available in a shaker door style in several colors, ready to be delivered to your project site asap!",
+      name: "Furniture",
       image: "/product-1.jpg",
       link: "",
     },
     {
-      name: "IN-STOCK CABINETRY",
-      description:
-        "Looking for cabinets quick? Our in-stock cabinetry is available in a shaker door style in several colors, ready to be delivered to your project site asap!",
+      name: "Remodeling",
       image: "/product-1.jpg",
       link: "",
     },
     {
-      name: "IN-STOCK CABINETRY",
-      description:
-        "Looking for cabinets quick? Our in-stock cabinetry is available in a shaker door style in several colors, ready to be delivered to your project site asap!",
-      image: "/product-1.jpg",
-      link: "",
-    },
-    {
-      name: "IN-STOCK CABINETRY",
-      description:
-        "Looking for cabinets quick? Our in-stock cabinetry is available in a shaker door style in several colors, ready to be delivered to your project site asap!",
-      image: "/product-1.jpg",
-      link: "",
-    },
-    {
-      name: "IN-STOCK CABINETRY",
-      description:
-        "Looking for cabinets quick? Our in-stock cabinetry is available in a shaker door style in several colors, ready to be delivered to your project site asap!",
-      image: "/product-1.jpg",
-      link: "",
-    },
-    {
-      name: "IN-STOCK CABINETRY",
-      description:
-        "Looking for cabinets quick? Our in-stock cabinetry is available in a shaker door style in several colors, ready to be delivered to your project site asap!",
+      name: "Finance Your Project",
       image: "/product-1.jpg",
       link: "",
     },
@@ -77,23 +61,28 @@ export default function Home() {
   return (
     <>
       <section className="section-container">
-        <div className="grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-x-6 md:gap-x-4 gap-x-2.5 lg:gap-y-12 md:gap-y-9 gap-y-6">
+        <div className="grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-4 gap-2.5">
           {dataArray &&
             dataArray.map((data, index) => (
-              <div key={index} className="flex flex-col text-center h-full">
+              <div
+                key={index}
+                className="relative before:absolute before:inset-0 before:w-full before:h-full before:bg-black/25"
+              >
                 <img
                   src={data.image}
                   alt="Item"
-                  className="w-full lg:h-[25rem] md:h-80 h-60 object-cover rounded-sm"
+                  className="w-full h-60 object-cover rounded-sm"
                 />
-                <h2 className="font-semibold tracking-wider lg:text-xl sm:text-lg text-base uppercase md:mt-4 mt-2">
-                  {data.name}
-                </h2>
-                <p className="mb-4">{data.description}</p>
-                <div className="mt-auto">
-                  <Link href={data.link} className="btn-black">
-                    See more
-                  </Link>
+                <div className="absolute bottom-4 w-full">
+                  <h2 className="font-semibold text-center tracking-wider lg:text-xl sm:text-lg text-base uppercase text-white">
+                    {data.name}{" "}
+                    <Link
+                      href={data.link}
+                      className="text-sm font-normal lowercase opacity-85 hover:opacity-100"
+                    >
+                      more..
+                    </Link>
+                  </h2>
                 </div>
               </div>
             ))}

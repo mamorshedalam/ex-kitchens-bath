@@ -1,5 +1,11 @@
 "use client";
-import { AlignRight, Mail, MoveRight, Phone } from "lucide-react";
+import {
+  AlignRight,
+  Mail,
+  MessageSquareText,
+  MoveRight,
+  Phone,
+} from "lucide-react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { useState } from "react";
@@ -7,24 +13,29 @@ import { useState } from "react";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
-    <header className="relative max-w-screen-2xl mx-auto">
+    <header className="fixed top-0 left-0 w-full z-[999] bg-white shadow-md">
       <div className="top-header">
-        <span>Want talk with expert</span>
+        <span>(267) 400 4003</span>
+        <span>We offer full remodeling services</span>
         <MoveRight size={14} />
         <Link
           className="font-medium text-rose-200 hover:text-white"
           href={`/contact`}
         >
-          Contact
+          book an appointment
         </Link>
       </div>
-      <nav className="flex items-center justify-between xl:px-6 md:p-4 p-2.5 shadow-md">
+      <nav className="flex items-center justify-between xl:px-6 md:p-4 p-2.5">
         <div>
           <Link href={`/`}>
             <Logo />
           </Link>
         </div>
-        <div className={`nav-main ${menu ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+        <div
+          className={`nav-main ${
+            menu ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        >
           <ul className="lg:flex items-center">
             <li>
               <Link href={`/`} className="nav-item">
@@ -63,26 +74,35 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="flex items-center md:gap-2">
-          <Link href={`/`}>
-            <button className="btn-black mr-1.5">Text Us</button>
-          </Link>
-          <Link href={`/`}>
-            <button className="btn-icon">
-              <Mail size={21} />
+        <div className="flex flex-wrap items-center justify-end md:gap-2">
+          <div className="sm:w-auto w-full text-end sm:order-1 order-2">
+            <Link href={`/`}>
+              <button className="btn-black">Book your consultation</button>
+            </Link>
+          </div>
+          <div className="sm:order-2 order-1 flex flex-wrap items-center justify-end md:gap-2">
+            <Link href={`/`}>
+              <button className="btn-icon">
+                <MessageSquareText size={21} />
+              </button>
+            </Link>
+            <Link href={`/`}>
+              <button className="btn-icon">
+                <Mail size={21} />
+              </button>
+            </Link>
+            <Link href={`/`}>
+              <button className="btn-icon">
+                <Phone size={21} />
+              </button>
+            </Link>
+            <button
+              onClick={() => setMenu(!menu)}
+              className="lg:hidden block ml-2"
+            >
+              <AlignRight size={24} />
             </button>
-          </Link>
-          <Link href={`/`}>
-            <button className="btn-icon">
-              <Phone size={21} />
-            </button>
-          </Link>
-          <button
-            onClick={() => setMenu(!menu)}
-            className="lg:hidden block ml-2"
-          >
-            <AlignRight size={24} />
-          </button>
+          </div>
         </div>
       </nav>
     </header>

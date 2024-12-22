@@ -4,7 +4,7 @@
 
 @layer utilities {
   .top-header {
-    @apply flex items-center justify-center gap-2 bg-rose-600 text-white md:text-sm text-xs md:leading-6 leading-5 tracking-wide capitalize p-1.5;
+    @apply flex flex-wrap items-center justify-center gap-2 bg-rose-600 text-white md:text-sm text-xs md:leading-6 leading-5 tracking-wide capitalize p-1.5;
   }
   .nav-main {
     @apply lg:block lg:relative absolute top-full right-0 lg:opacity-100 visible bg-white lg:w-auto lg:max-w-full w-3/4 max-w-60 lg:drop-shadow-none drop-shadow-md duration-500 ease-out transition-all;
@@ -19,7 +19,7 @@
     @apply flex items-center justify-center md:scale-100 scale-[0.80] bg-black text-white w-9 h-9 rounded-full hover:bg-rose-600 duration-300 ease-out transition-colors;
   }
   .section-container {
-    @apply relative max-w-screen-2xl xl:p-20 lg:p-12 md:px-9 sm:px-6 px-2 py-9 mx-auto;
+    @apply relative max-w-screen-2xl lg:p-12 md:px-9 sm:px-6 px-2 py-9 mx-auto;
   }
   .section-banner {
     @apply relative text-white bg-cover bg-center bg-no-repeat md:px-9 px-4 pt-12 md:h-60 h-40 md:text-left text-center before:absolute before:inset-0 before:w-full before:h-full before:bg-black/25 before:z-0;
