@@ -20,9 +20,9 @@ export default function Navbar() {
         <MoveRight size={14} />
         <Link
           className="font-medium text-rose-200 hover:text-white"
-          href={`/contact`}
+          href={`/consultation`}
         >
-          book an appointment
+          Book your consultation
         </Link>
       </div>
       <nav className="flex items-center justify-between xl:px-6 md:p-4 p-2.5">
@@ -76,7 +76,7 @@ export default function Navbar() {
         </div>
         <div className="flex flex-wrap items-center justify-end md:gap-2">
           <div className="sm:w-auto w-full text-end sm:order-1 order-2">
-            <Link href={`/`}>
+            <Link href={`/consultation`}>
               <button className="btn-black">Book your consultation</button>
             </Link>
           </div>

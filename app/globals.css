@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer components {
   .top-header {
-    @apply flex flex-wrap items-center justify-center gap-2 bg-rose-600 text-white md:text-sm text-xs md:leading-6 leading-5 tracking-wide capitalize p-1.5;
+    @apply flex flex-wrap items-center justify-center gap-2 bg-rose-600 text-white md:leading-6 leading-5 tracking-wide capitalize p-2;
   }
   .nav-main {
-    @apply lg:block lg:relative absolute top-full right-0 lg:opacity-100 visible bg-white lg:w-auto lg:max-w-full w-3/4 max-w-60 lg:drop-shadow-none drop-shadow-md duration-500 ease-out transition-all;
+    @apply lg:block lg:relative absolute top-full right-0 lg:!opacity-100 lg:!visible bg-white lg:w-auto lg:max-w-full w-3/4 max-w-60 lg:drop-shadow-none drop-shadow-md duration-500 ease-out transition-all;
   }
   .nav-item {
     @apply block md:text-lg text-base tracking-wide font-semibold text-center xl:px-3 lg:p-2 p-1 hover:text-rose-600 duration-300 ease-out transition-colors;
@@ -32,5 +32,12 @@
 @layer base {
   body {
     @apply font-omnes sm:text-base text-sm;
+  }
+}
+
+@layer utilities {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #e11d48 !important;
   }
 }

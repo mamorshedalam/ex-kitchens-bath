@@ -24,7 +24,7 @@ export default function Footer() {
                 </button>
               </Link>
               <div className="w-full">
-                <Link href={`/`}><button className="btn-black">Book your consultation</button></Link>
+                <Link href={`/consultation`}><button className="btn-black">Book your consultation</button></Link>
               </div>
         </div>
         <p className="font-medium leading-4">(267) 400 4003</p>

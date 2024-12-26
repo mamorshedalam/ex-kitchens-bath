@@ -1,3 +1,4 @@
+import Gallery from "@/components/Gallery";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 
@@ -6,7 +7,7 @@ export default function Home() {
     {
       name: "Kitchen Design",
       image: "/Kitchen Design.jpeg",
-      link: "",
+      link: "https://tribecacabinetry.com",
     },
     {
       name: "Flooring",
@@ -20,18 +21,18 @@ export default function Home() {
     },
     {
       name: "Blinds",
-      image: "/product-1.jpg",
+      image: "/Blinds.jpg",
       link: "",
     },
     {
       name: "Custom Art",
-      image: "/product-1.jpg",
-      link: "",
+      image: "/Custom Art.jpeg",
+      link: "https://www.instagram.com/arts.by.naz?igsh=ODNkYTh0M3I3NWk0",
     },
     {
       name: "Furniture",
-      image: "/product-1.jpg",
-      link: "",
+      image: "/Furniture.jpg",
+      link: "https://saloni.furniture/",
     },
     {
       name: "Remodeling",
@@ -40,7 +41,7 @@ export default function Home() {
     },
     {
       name: "Finance Your Project",
-      image: "/product-1.jpg",
+      image: "/product-4.jpg",
       link: "",
     },
   ];
@@ -50,13 +51,20 @@ export default function Home() {
     "/brand/brand-3.svg",
     "/brand/brand-4.svg",
     "/brand/brand-5.svg",
+    "/brand/brand-6.png",
     "/brand/brand-7.svg",
-    "/brand/brand-8.png",
-    "/brand/brand-9.svg",
-    "/brand/brand-10.svg",
-    "/brand/brand-11.svg",
-    "/brand/brand-12.svg",
-    "/brand/brand-13.svg",
+    "/brand/brand-8.svg",
+    "/brand/brand-9.jpg",
+    "/brand/brand-10.png",
+    "/brand/brand-11.png",
+  ];
+  const galleryArray = [
+    "/item-1.jpg",
+    "/item-2.jpg",
+    "/item-3.jpg",
+    "/item-4.jpg",
+    "/item-5.jpg",
+    "/item-6.jpg",
   ];
   return (
     <>
@@ -64,45 +72,30 @@ export default function Home() {
         <div className="grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-4 gap-2.5">
           {dataArray &&
             dataArray.map((data, index) => (
-              <div
-                key={index}
-                className="relative before:absolute before:inset-0 before:w-full before:h-full before:bg-black/25"
-              >
-                <img
-                  src={data.image}
-                  alt="Item"
-                  className="w-full h-60 object-cover rounded-sm"
-                />
-                <div className="absolute bottom-4 w-full">
-                  <h2 className="font-semibold text-center tracking-wider lg:text-xl sm:text-lg text-base uppercase text-white">
-                    {data.name}{" "}
-                    <Link
-                      href={data.link}
-                      className="text-sm font-normal lowercase opacity-85 hover:opacity-100"
-                    >
-                      more..
-                    </Link>
-                  </h2>
+              <Link href={data.link} key={index}>
+                <div className="relative before:absolute before:inset-0 before:w-full before:h-full before:bg-black/25">
+                  <img
+                    src={data.image}
+                    alt="Item"
+                    className="w-full h-60 object-cover rounded-sm"
+                  />
+                  <div className="absolute bottom-4 w-full">
+                    <h2 className="font-semibold text-center tracking-wider lg:text-xl sm:text-lg text-base uppercase text-white">
+                      {data.name}{" "}
+                      <span className="text-sm font-normal lowercase opacity-85 hover:opacity-100">
+                        more..
+                      </span>
+                    </h2>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
         </div>
       </section>
 
-      <section className="section-container !py-0">
-        <div className="section-banner bg-[url('/banner.jpg')]">
-          <div className="relative z-10">
-            <h1 className="font-semibold lg:text-5xl md:text-4xl text-2xl tracking-wider lg:mb-4 md:mb-2">
-              Finance Your Home Project
-            </h1>
-            <Link href={`/`}>
-              <button className="w-full flex items-center md:justify-start justify-center gap-2 md:text-xl text-lg hover:underline">
-                <span>Explore your financing options</span>
-                <MoveRight size={21} />
-              </button>
-            </Link>
-          </div>
-        </div>
+      <section>
+        <h2 className="section-title">Gallery</h2>
+        <Gallery dataArray={galleryArray} />
       </section>
 
       <section className="section-container">
