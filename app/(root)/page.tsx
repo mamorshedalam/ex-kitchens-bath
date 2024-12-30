@@ -1,5 +1,4 @@
 import Gallery from "@/components/Gallery";
-import { MoveRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -32,7 +31,7 @@ export default function Home() {
     {
       name: "Furniture",
       image: "/Furniture.jpg",
-      link: "https://saloni.furniture/",
+      link: "https://saloni.furniture",
     },
     {
       name: "Remodeling",
@@ -48,12 +47,12 @@ export default function Home() {
   const brandArray = [
     "/brand/brand-1.svg",
     "/brand/brand-2.svg",
+    "/brand/brand-8.svg",
     "/brand/brand-3.svg",
     "/brand/brand-4.svg",
     "/brand/brand-5.svg",
     "/brand/brand-6.png",
     "/brand/brand-7.svg",
-    "/brand/brand-8.svg",
     "/brand/brand-9.jpg",
     "/brand/brand-10.png",
     "/brand/brand-11.png",
@@ -69,11 +68,11 @@ export default function Home() {
   return (
     <>
       <section className="section-container">
-        <div className="grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-4 gap-2.5">
+        <div className="flex flex-wrap justify-center w-full">
           {dataArray &&
             dataArray.map((data, index) => (
-              <Link href={data.link} key={index}>
-                <div className="relative before:absolute before:inset-0 before:w-full before:h-full before:bg-black/25">
+              <Link className="block xl:w-1/4 md:w-1/3 w-1/2 px-2 mb-4" href={data.link} key={index}>
+                <div className="relative">
                   <img
                     src={data.image}
                     alt="Item"
@@ -105,9 +104,9 @@ export default function Home() {
             brandArray.map((link, index) => (
               <div
                 key={index}
-                className="max-w-60 lg:w-1/6 w-1/4 md:px-6 px-2.5"
+                className="max-w-60 lg:w-1/6 md:w-1/4 w-1/3 md:px-6 px-2.5 mb-2.5"
               >
-                <img src={link} alt="Brand" className="w-full" />
+                <img src={link} alt="Brand" className="w-full max-h-40 object-bottom object-cover" />
               </div>
             ))}
         </div>

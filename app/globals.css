@@ -4,13 +4,19 @@
 
 @layer components {
   .top-header {
-    @apply flex flex-wrap items-center justify-center gap-2 bg-rose-600 text-white md:leading-6 leading-5 tracking-wide capitalize p-2;
+    @apply flex flex-wrap items-center justify-center w-full gap-2 sm:text-base text-xs md:leading-6 leading-5 tracking-wide capitalize p-2;
   }
   .nav-main {
-    @apply lg:block lg:relative absolute top-full right-0 lg:!opacity-100 lg:!visible bg-white lg:w-auto lg:max-w-full w-3/4 max-w-60 lg:drop-shadow-none drop-shadow-md duration-500 ease-out transition-all;
+    @apply lg:block hidden bg-white lg:w-auto max-w-full w-3/4;
   }
   .nav-item {
-    @apply block md:text-lg text-base tracking-wide font-semibold text-center xl:px-3 lg:p-2 p-1 hover:text-rose-600 duration-300 ease-out transition-colors;
+    @apply block lg:text-lg text-base tracking-wide lg:font-semibold font-medium lg:text-center xl:px-3 lg:p-2 hover:text-rose-600 duration-300 ease-out transition-colors;
+  }
+  .nav-sub-menu {
+    @apply absolute group-hover:opacity-100 opacity-0 group-hover:visible invisible top-full bg-white shadow-md w-full py-3 rounded-b-sm transition-all duration-300 ease-out;
+  }
+  .nav-sub-item {
+    @apply block w-full lg:py-1 px-4 font-medium hover:bg-slate-300/70 transition-colors duration-300 ease-in;
   }
   .btn-black {
     @apply bg-black text-white md:text-base text-sm md:leading-5 font-semibold capitalize tracking-wide md:px-4 px-2 md:py-1.5 py-1 rounded-md hover:bg-rose-600 duration-300 ease-out transition-colors;
@@ -32,12 +38,5 @@
 @layer base {
   body {
     @apply font-omnes sm:text-base text-sm;
-  }
-}
-
-@layer utilities {
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: #e11d48 !important;
   }
 }

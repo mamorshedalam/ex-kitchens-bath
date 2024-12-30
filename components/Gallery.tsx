@@ -13,11 +13,11 @@ export default function Gallery({ dataArray }: { dataArray: string[] }) {
       slidesPerView={1}
       breakpoints={{
         768: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 12,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 12,
         },
       }}

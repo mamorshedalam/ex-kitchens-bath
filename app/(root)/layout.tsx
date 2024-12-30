@@ -6,7 +6,7 @@ export default function Layout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <main className="sm:mt-[115px] mt-[150px]">
+    <main className="sm:mt-[96px] mt-[112px]">
       <Navbar />
       {children}
       <Footer />

@@ -54,14 +54,14 @@ export default function ConsultationPage() {
         </div>
         <div className="md:w-1/2 w-full px-2 mb-3">
           <input
-            type="text"
+            type="tel"
             placeholder="Phone"
             className="w-full py-1.5 px-3 border border-black/10 rounded-sm"
           />
         </div>
         <div className="md:w-1/2 w-full px-2 mb-3">
           <input
-            type="text"
+            type="date"
             placeholder="Preferred Date"
             className="w-full py-1.5 px-3 border border-black/10 rounded-sm"
           />
@@ -73,6 +73,39 @@ export default function ConsultationPage() {
             <option value="afternoon">Afternoon</option>
             <option value="evening">Evening</option>
           </select>
+        </div>
+        <div className="w-full px-2 mb-3">
+          <p>What products are you interested in?</p>
+          <div className="grid sm:grid-cols-3 grid-cols-2 gap-2 mt-2 text-sm">
+            <div className="flex items-center gap-1">
+              <input type="checkbox" name="kitchen-design" id="kitchen-design" />
+              <label htmlFor="kitchen-design">Kitchen Design</label>
+            </div>
+            <div className="flex items-center gap-1">
+              <input type="checkbox" name="flooring" id="flooring" />
+              <label htmlFor="flooring">Flooring</label>
+            </div>
+            <div className="flex items-center gap-1">
+              <input type="checkbox" name="closet" id="closet" />
+              <label htmlFor="closet">Closet Design</label>
+            </div>
+            <div className="flex items-center gap-1">
+              <input type="checkbox" name="blinds" id="blinds" />
+              <label htmlFor="blinds">Blinds</label>
+            </div>
+            <div className="flex items-center gap-1">
+              <input type="checkbox" name="custom-art" id="custom-art" />
+              <label htmlFor="custom-art">Custom Art</label>
+            </div>
+            <div className="flex items-center gap-1">
+              <input type="checkbox" name="furniture" id="furniture" />
+              <label htmlFor="furniture">Furniture</label>
+            </div>
+            <div className="flex items-center gap-1">
+              <input type="checkbox" name="remodeling" id="remodeling" />
+              <label htmlFor="remodeling">Remodeling</label>
+            </div>
+          </div>
         </div>
         <div className="w-full px-2 mb-3">
           <textarea
