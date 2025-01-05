@@ -4,7 +4,7 @@
 
 @layer components {
   .top-header {
-    @apply flex flex-wrap items-center justify-center w-full gap-2 sm:text-base text-xs md:leading-6 leading-5 tracking-wide capitalize p-2;
+    @apply flex flex-wrap items-center justify-center w-full gap-2 sm:text-base text-xs md:leading-6 leading-5 tracking-wide capitalize p-2 pb-0;
   }
   .nav-main {
     @apply lg:block hidden bg-white lg:w-auto max-w-full w-3/4;

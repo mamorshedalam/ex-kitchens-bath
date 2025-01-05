@@ -14,281 +14,279 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
     <header className="fixed top-0 left-0 w-full z-[999] bg-white shadow-md">
-    <div className="top-header md:hidden">
+    <div className="top-header lg:hidden">
       <span>(267) 400 4003</span>
       <span>We offer full remodeling services</span>
     </div>
-      <nav className="flex items-center flex-wrap xl:px-6 md:px-4 p-2.5 pt-0">
+      <nav className="flex lg:items-end items-center justify-between xl:px-6 md:px-4 p-2.5 pt-0">
         <div>
           <Link href={`/`}>
             <Logo />
           </Link>
         </div>
-        <div className="flex-grow basis-0">
-          <div className="top-header lg:flex hidden">
-            <span>(267) 400 4003</span>
-            <span>We offer full remodeling services</span>
-            <MoveRight size={14} />
-            <Link className="font-medium" href={`/consultation`}>
-              Book your consultation
-            </Link>
-          </div>
-          <div className="flex items-center lg:justify-evenly justify-end">
-            <div className="nav-main">
-              <ul className="flex items-center">
-                <li className="group relative">
-                  <Link href={`https://tribecacabinetry.com`} className="nav-item">
-                    Kitchen Design
+        <div className="nav-main">
+      <div className="top-header">
+        <span>(267) 400 4003</span>
+        <span>We offer full remodeling services</span>
+      </div>
+          <ul className="flex items-center">
+            <li className="group relative">
+              <Link href={`https://tribecacabinetry.com`} className="nav-item">
+                Kitchen Design
+              </Link>
+              <ul className="nav-sub-menu">
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 1
                   </Link>
-                  <ul className="nav-sub-menu">
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 1
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 3
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 4
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 5
-                      </Link>
-                    </li>
-                  </ul>
                 </li>
-                <li className="group relative">
-                  <Link href={`/`} className="nav-item">
-                    Flooring
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 2
                   </Link>
-                  <ul className="nav-sub-menu">
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 1
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 3
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 4
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 5
-                      </Link>
-                    </li>
-                  </ul>
                 </li>
-                <li className="group relative">
-                  <Link href={`https://saloni.furniture/collection/dressing-rooms`} className="nav-item">
-                    Closet Design
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 3
                   </Link>
-                  <ul className="nav-sub-menu">
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 1
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 3
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 4
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 5
-                      </Link>
-                    </li>
-                  </ul>
                 </li>
-                <li className="group relative">
-                  <Link href={`/`} className="nav-item">
-                    Blinds
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 4
                   </Link>
-                  <ul className="nav-sub-menu">
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 1
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 3
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 4
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 5
-                      </Link>
-                    </li>
-                  </ul>
                 </li>
-                <li className="group relative">
-                  <Link href={`https://www.instagram.com/arts.by.naz?igsh=ODNkYTh0M3I3NWk0`} className="nav-item">
-                    Custom Art
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 5
                   </Link>
-                  <ul className="nav-sub-menu">
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 1
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 3
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 4
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 5
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="group relative">
-                  <Link href={`https://saloni.furniture`} className="nav-item">
-                    Furniture
-                  </Link>
-                  <ul className="nav-sub-menu">
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 1
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 3
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 4
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 5
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="group relative">
-                  <Link href={`/`} className="nav-item">
-                    Remodeling
-                  </Link>
-                  <ul className="nav-sub-menu">
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 1
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 3
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 4
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="nav-sub-item" href={``}>
-                        Item 5
-                      </Link>
-                    </li>
-                  </ul>
                 </li>
               </ul>
-            </div>
-            <div className="flex flex-wrap items-center justify-end md:gap-2">
-              <div className="sm:w-auto w-full text-end sm:order-1 order-2">
-                <Link href={`/consultation`}>
-                  <button className="btn-black">Book your consultation</button>
-                </Link>
-              </div>
-              <div className="sm:order-2 order-1 flex flex-wrap items-center justify-end md:gap-2">
-                <a href="sms:(267)4004003" className="btn-icon">
-                  <MessageSquareText size={21} />
-                </a>
-                <a
-                  href="mailto:info@expresskitchensandbath.com"
-                  className="btn-icon"
-                >
-                  <Mail size={21} />
-                </a>
-                <a href="tel:(267)4004003" className="btn-icon">
-                  <Phone size={21} />
-                </a>
-                <button
-                  onClick={() => setMenu(!menu)}
-                  className="lg:hidden block ml-2"
-                >
-                  <AlignRight size={24} />
-                </button>
-              </div>
-            </div>
+            </li>
+            <li className="group relative">
+              <Link
+                href={`https://saloni.furniture/collection/dressing-rooms`}
+                className="nav-item"
+              >
+                Closet Design
+              </Link>
+              <ul className="nav-sub-menu">
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 1
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 2
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 3
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 5
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="group relative">
+              <Link href={`/`} className="nav-item">
+                Flooring
+              </Link>
+              <ul className="nav-sub-menu">
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 1
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 2
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 3
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 5
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="group relative">
+              <Link href={`/`} className="nav-item">
+                Blinds
+              </Link>
+              <ul className="nav-sub-menu">
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 1
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 2
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 3
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 5
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="group relative">
+              <Link
+                href={`https://www.instagram.com/arts.by.naz?igsh=ODNkYTh0M3I3NWk0`}
+                className="nav-item"
+              >
+                Custom Art
+              </Link>
+              <ul className="nav-sub-menu">
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 1
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 2
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 3
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 5
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="group relative">
+              <Link href={`https://saloni.furniture`} className="nav-item">
+                Furniture
+              </Link>
+              <ul className="nav-sub-menu">
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 1
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 2
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 3
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 5
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="group relative">
+              <Link href={`/`} className="nav-item">
+                Remodeling
+              </Link>
+              <ul className="nav-sub-menu">
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 1
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 2
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 3
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-sub-item" href={``}>
+                    Item 5
+                  </Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-wrap items-center justify-end md:gap-2">
+          <div className="sm:w-auto w-full text-end sm:order-1 order-2">
+            <Link href={`/consultation`}>
+              <button className="btn-black">Book your consultation</button>
+            </Link>
+          </div>
+          <div className="sm:order-2 order-1 flex flex-wrap items-center justify-end md:gap-2">
+            <a href="sms:(267)4004003" className="btn-icon">
+              <MessageSquareText size={21} />
+            </a>
+            <a
+              href="mailto:info@expresskitchensandbath.com"
+              className="btn-icon"
+            >
+              <Mail size={21} />
+            </a>
+            <a href="tel:(267)4004003" className="btn-icon">
+              <Phone size={21} />
+            </a>
+            <button
+              onClick={() => setMenu(!menu)}
+              className="lg:hidden block ml-2"
+            >
+              <AlignRight size={24} />
+            </button>
           </div>
         </div>
       </nav>
@@ -345,7 +343,10 @@ export default function Navbar() {
             </ul>
           </li>
           <li className="group relative">
-            <Link href={`https://saloni.furniture/collection/dressing-rooms`} className="nav-item">
+            <Link
+              href={`https://saloni.furniture/collection/dressing-rooms`}
+              className="nav-item"
+            >
               Closet Design
             </Link>
             <ul>
@@ -389,7 +390,10 @@ export default function Navbar() {
             </ul>
           </li>
           <li className="group relative">
-            <Link href={`https://www.instagram.com/arts.by.naz?igsh=ODNkYTh0M3I3NWk0`} className="nav-item">
+            <Link
+              href={`https://www.instagram.com/arts.by.naz?igsh=ODNkYTh0M3I3NWk0`}
+              className="nav-item"
+            >
               Custom Art
             </Link>
             <ul>

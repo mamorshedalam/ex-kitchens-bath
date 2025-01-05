@@ -9,14 +9,14 @@ export default function Home() {
       link: "https://tribecacabinetry.com",
     },
     {
-      name: "Flooring",
-      image: "/Flooring.jpg",
-      link: "",
-    },
-    {
       name: "Closet Design",
       image: "/Closet Design.jpg",
       link: "https://saloni.furniture/collection/dressing-rooms",
+    },
+    {
+      name: "Flooring",
+      image: "/Flooring.jpg",
+      link: "",
     },
     {
       name: "Blinds",
